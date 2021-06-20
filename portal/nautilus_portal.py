@@ -5,6 +5,7 @@ from dbus.mainloop.glib import DBusGMainLoop
 import dbus
 import dbus.service
 import logging
+import os
 import sys
 sys.path.insert(1, "/usr/libexec/naut-portal-packages")
 
@@ -14,7 +15,7 @@ UID_AS_PATH = "/org/freedesktop/portal/desktop"
 
 
 def main():
-    logging.basicConfig(filename="/home/herbas/portal.log",
+    logging.basicConfig(filename=f"{os.environ['HOME']}/portal.log",
                         filemode='a',
                         format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
                         datefmt='%H:%M:%S',
