@@ -1,3 +1,6 @@
 [submodule "nautilus"]
 	path = nautilus
 	url = https://gitlab.gnome.org/gnome/nautilus.git
+[submodule "nautilus-filechooser"]
+	path = nautilus-filechooser
+	url = https://github.com/ranchester2/nautilus-filechooser-chooser
