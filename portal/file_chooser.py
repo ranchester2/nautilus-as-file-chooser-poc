@@ -1,6 +1,7 @@
 import dbus
 import dbus.service
 import logging
+import subprocess
 from nautilus.defs import UID_AS_PATH
 
 
@@ -14,4 +15,5 @@ class NautilusPortal(dbus.service.Object):
     @dbus.service.method(dbus_interface="org.freedesktop.impl.portal.FileChooser",
                          in_signature="osssa{sv}", out_signature="a{sv}")
     def OpenFile(self, handle: dbus.ObjectPath, app_id: str, parent_window: str, title: str, options: dict):
-        logging.info("FileChooser works!")
+        file_uri = subprocess.check_output(["flatpak", "run", "org.gnome.NautilusDevel"])
+        return 0, {"uris": [file_uri], "choices": []}
