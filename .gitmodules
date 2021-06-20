@@ -1,0 +1,3 @@
+[submodule "nautilus"]
+	path = nautilus
+	url = https://gitlab.gnome.org/gnome/nautilus.git

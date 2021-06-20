@@ -1,0 +1,7 @@
+[Unit]
+Description=Nautilus FileChooser PC service (GTK+/GNOME implementation)
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.impl.portal.desktop.nautilus
+ExecStart=/usr/libexec/xdg-desktop-portal-nautilus

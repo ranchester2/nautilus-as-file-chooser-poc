@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.impl.portal.desktop.nautilus
+Exec=/usr/libexec/xdg-desktop-portal-nautilus
+SystemdService=xdg-desktop-portal-nautilus.service
