@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-from nautilus.file_chooser import NautilusPortal
 from gi.repository import GLib
 from dbus.mainloop.glib import DBusGMainLoop
 import dbus
 import dbus.service
 import logging
 import os
+
 import sys
 sys.path.insert(1, "/usr/libexec/naut-portal-packages")
 
+from nautilus.file_chooser import NautilusPortal
 
 UID = "org.freedesktop.impl.portal.desktop.nautilus"
 UID_AS_PATH = "/org/freedesktop/portal/desktop"
