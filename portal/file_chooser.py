@@ -13,7 +13,7 @@ class NautilusPortal(dbus.service.Object):
         logging.info("created portal")
 
     @dbus.service.method(dbus_interface="org.freedesktop.impl.portal.FileChooser",
-                         in_signature="osssa{sv}", out_signature="a{sv}")
+                         in_signature="osssa{sv}", out_signature="ua{sv}")
     def OpenFile(self, handle: dbus.ObjectPath, app_id: str, parent_window: str, title: str, options: dict):
         file_uri = subprocess.check_output(["flatpak", "run", "org.gnome.NautilusDevel"])
-        return 0, {"uris": [file_uri], "choices": []}
+        return 0, {"uris": [file_uri], "choices": ["choice", "value"]}
